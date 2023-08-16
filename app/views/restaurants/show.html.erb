@@ -1,0 +1,10 @@
+<h1>Carte du restaurant</h1>
+<div class='container'>
+  <p>
+    <strong><h2><%= @restaurant.name%></h2></strong><br>
+    <strong>Phone number : </strong><%=@restaurant.phone_number%><br>
+    <strong>Address : </strong><%=@restaurant.address%><br>
+    <strong>Category : </strong><%=@restaurant.category%><br>
+  </p>
+  <%= link_to "Back to list", restaurants_path, class: "btn btn-danger"%>
+</div>

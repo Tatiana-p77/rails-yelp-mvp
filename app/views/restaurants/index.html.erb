@@ -1,0 +1,21 @@
+<div class="text-center">
+  <h1 class="title">☠️ The restaurants ☠️</h1>
+</div>
+
+<div class="row">
+  <% @restaurants.each do |restaurant| %>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="restaurant-name"><%= restaurant.name %></h2>
+          <ul>
+            <li class="restaurant-description"><strong>Address:</strong> <%= restaurant.address %></li>
+            <li class="restaurant-description"><strong>Phone number:</strong> <%= restaurant.phone_number %></li>
+            <li class="restaurant-description"><strong>Category:</strong> <%= restaurant.category %></li>
+          </ul>
+          <%= link_to "Add a Review", new_restaurant_review_path(restaurant), class: "btn-review" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
